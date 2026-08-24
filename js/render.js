@@ -82,6 +82,11 @@ export function renderAllFromConfig() {
     `;
   }
 
+  const groomAddress = document.getElementById('groom-address');
+  const groomAddressText = document.getElementById('groom-address-text');
+  if (groomAddressText && couple.groom.address) groomAddressText.textContent = couple.groom.address;
+  if (groomAddress && !couple.groom.address) groomAddress.remove();
+
   const groomIg = document.getElementById('groom-instagram');
   const groomIgHandle = document.getElementById('groom-ig-handle');
   if (groomIg && couple.groom.instagram) groomIg.href = couple.groom.instagram;
@@ -101,6 +106,11 @@ export function renderAllFromConfig() {
       <strong class="text-text-main">${couple.bride.father}</strong> &amp; <strong class="text-text-main">${couple.bride.mother}</strong>
     `;
   }
+
+  const brideAddress = document.getElementById('bride-address');
+  const brideAddressText = document.getElementById('bride-address-text');
+  if (brideAddressText && couple.bride.address) brideAddressText.textContent = couple.bride.address;
+  if (brideAddress && !couple.bride.address) brideAddress.remove();
 
   const brideIg = document.getElementById('bride-instagram');
   const brideIgHandle = document.getElementById('bride-ig-handle');

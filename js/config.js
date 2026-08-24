@@ -13,6 +13,7 @@ export const WEDDING_CONFIG = {
       father: "Bapak Saridi",
       mother: "Ibu Surami",
       childOrder: "Putra",
+      address: "Sempu 0036/009, Pringombo, Rongkop, Gunungkidul",
       instagram: "https://instagram.com/05.082bl",
       instagramHandle: "@05.082bl",
       // CDN / Placeholder Photo
@@ -24,6 +25,7 @@ export const WEDDING_CONFIG = {
       father: "Bapak Andi Wahyu Lukito",
       mother: "Ibu Sugiyarti",
       childOrder: "Putri",
+      address: "Tenggang 004 No.014, Tengang, Kemedang, Tanjungsari, Gunungkidul",
       instagram: "https://instagram.com/tamaraandil_",
       instagramHandle: "@tamaraandil_",
       // CDN / Placeholder Photo
