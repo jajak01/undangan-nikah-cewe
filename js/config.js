@@ -37,13 +37,13 @@ export const WEDDING_CONFIG = {
 
   // Event Schedule & Locations
   event: {
-    // Timestamp ISO & target = Acara NGUNDUH MANTU (Minggu, 20 September 2026 10:00 WIB / UTC+7)
-    targetTimestamp: 1789873200000, // 2026-09-20T10:00:00+07:00 (Ngunduh Mantu)
-    dateFormatted: "Minggu, 20 September 2026",
-    day: "Minggu",
-    dateNumber: "20",
+// Timestamp ISO & target = Acara IJAB QOBUL (Kamis, 17 September 2026 10:00 WIB / UTC+7)
+    targetTimestamp: 1789606800000, // 2026-09-17T10:00:00+07:00 (Ijab Qobul)
+    dateFormatted: "Kamis, 17 September 2026",
+    day: "kamis",
+    dateNumber: "17",
     monthYear: "September 2026",
-    
+
     // Akad Nikah
     akad: {
       title: "Akad Nikah",
@@ -58,11 +58,11 @@ export const WEDDING_CONFIG = {
     // Resepsi
     resepsi: {
       title: "Resepsi Pernikahan",
-      date: "Minggu, 20 September 2026",
-      time: "10:00 WIB - Selesai",
-      venue: "KEDIAMAN MEMPELAI PRIA",
-      address: "Sempu 0036/009, Pringombo Rongkop, Gunungkidul",
-      mapsUrl: "https://maps.app.goo.gl/kpxCwSS1NaSogin46",
+      date: "Kamis, 17 September 2026",
+      time: "08:00 WIB - Selesai",
+      venue: "KEDIAMAN MEMPELAI WANITA",
+      address: "Tenggang 004 No.014, Tengang, Kemedang, Tanjungsari, Gunungkidul",
+      mapsUrl: "https://maps.app.goo.gl/aKogD7BGKfrxEu3Z7",
       calendarTitle: "Ijab Fendi & Tamara"
     },
 
