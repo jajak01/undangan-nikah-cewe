@@ -378,144 +378,92 @@
     <div id="gallery-photos-grid" class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6"></div>
   </section>
 
-  <!-- ======================================================================
-       SEKSI 7: AMPLOP DIGITAL & KIRIM HADIAH (GIFT DYNAMIC)
-       ====================================================================== -->
-  <section id="gift" class="relative py-20 px-4 bg-bg-main overflow-hidden">
-    <div class="max-w-3xl mx-auto text-center mb-8" data-aos="fade-up">
-      <span class="text-xs font-serif text-accent-gold uppercase tracking-[0.25em] font-semibold">Wedding Gift</span>
-      <h2 class="font-semibold text-2xl sm:text-3xl font-bold text-primary mt-1">Amplop Digital &amp; Kado</h2>
-      <div class="w-12 h-0.5 bg-accent-gold mx-auto mt-3"></div>
-      <p class="text-xs sm:text-sm text-text-muted mt-3 max-w-lg mx-auto">
-        Doa restu Anda merupakan karunia terindah bagi kami. Namun jika ingin memberikan tanda kasih secara digital, Anda dapat menggunakan fasilitas di bawah ini:
-      </p>
+ <!-- ======================================================================
+     SEKSI 7: AMPLOP DIGITAL & KIRIM HADIAH (GIFT DYNAMIC)
+     ====================================================================== -->
+<section id="gift" class="relative py-20 px-4 bg-bg-main overflow-hidden">
+  <div class="max-w-3xl mx-auto text-center mb-8" data-aos="fade-up">
+    <span class="text-xs font-serif text-accent-gold uppercase tracking-[0.25em] font-semibold">Wedding Gift</span>
+    <h2 class="font-semibold text-2xl sm:text-3xl font-bold text-primary mt-1">Amplop Digital &amp; Kado</h2>
+    <div class="w-12 h-0.5 bg-accent-gold mx-auto mt-3"></div>
+    <p class="text-xs sm:text-sm text-text-muted mt-3 max-w-lg mx-auto">
+      Doa restu Anda merupakan karunia terindah bagi kami. Namun jika ingin memberikan tanda kasih secara digital, Anda dapat menggunakan fasilitas di bawah ini:
+    </p>
 
-      <!-- Toggle Button -->
-      <button id="btn-toggle-amplop" class="btn-gold mt-6 inline-flex items-center gap-2.5 px-6 py-3 rounded-full text-xs sm:text-sm font-semibold shadow-md">
-        <svg class="w-4 h-4 text-accent-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
-        <span>Kirim Hadiah Pernikahan</span>
-        <svg id="amplop-toggle-icon" class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+    <!-- Toggle Button -->
+    <button id="btn-toggle-amplop" class="btn-gold mt-6 inline-flex items-center gap-2.5 px-6 py-3 rounded-full text-xs sm:text-sm font-semibold shadow-md">
+      <svg class="w-4 h-4 text-accent-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+      <span>Kirim Hadiah Pernikahan</span>
+      <svg id="amplop-toggle-icon" class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+    </button>
+  </div>
+
+  <!-- Toggleable Gift Container -->
+  <div id="amplop-content" class="max-w-2xl mx-auto hidden transition-all duration-500">
+    <!-- Centered layout for single bank card -->
+    <div class="max-w-md mx-auto mt-4">
+      
+      <!-- Bank Bride Card (MANDIRI) -->
+      <div class="rounded-3xl border border-border-subtle shadow-2xl relative overflow-hidden aspect-[1.586/1] bg-white text-left group">
+        <!-- Background Gradient and Pattern -->
+        <div class="absolute inset-0 bg-gradient-to-br from-white via-white to-neutral-200 opacity-90"></div>
+        <div class="absolute inset-0 opacity-[0.03] bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48ZyBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMwMDAiIGZpbGwtb3BhY2l0eT0iMSI+PHBhdGggZD0iTTAgMGg0MHY0MEgwVjB6bTIwIDIwaDIwdjIwSDIWMjB6TTAgMjBoMjB2MjBIMFYyMHoyMCAwaDIwdjIwSDIwVjB6Ii8+PC9nPjwvZz48L3N2Zz4=')] bg-repeat"></div>
+
+        <div class="relative z-10 p-6 flex flex-col h-full">
+          <div class="flex justify-end mb-1">
+            <span id="bank-bride-name" class="font-bold text-lg text-primary tracking-tight">MANDIRI</span>
+          </div>
+
+          <div class="flex-grow flex flex-col justify-center">
+            <div class="w-12 h-9 rounded-md bg-gradient-to-b from-yellow-300 to-yellow-500 border border-yellow-600/50 mb-4 p-1 flex flex-wrap gap-px">
+              <div class="w-2 h-2 bg-yellow-700/20 rounded-sm"></div>
+              <div class="w-2 h-2 bg-yellow-700/20 rounded-sm"></div>
+              <div class="w-2 h-2 bg-yellow-700/20 rounded-sm"></div>
+              <div class="w-2 h-2 bg-yellow-700/20 rounded-sm"></div>
+            </div>
+            
+            <div id="bank-bride-acc" class="font-mono text-2xl font-medium text-neutral-800 tracking-wider">
+              <!-- Populated from config.js -->
+            </div>
+          </div>
+
+          <div class="flex justify-between items-end">
+            <p id="bank-bride-holder" class="text-sm text-neutral-600 uppercase tracking-wide font-medium">
+              <!-- Populated from config.js -->
+            </p>
+
+            <button id="btn-copy-bride-bank" class="bg-white hover:bg-neutral-50 shadow-md border border-neutral-200 text-neutral-800 px-3.5 py-2.5 rounded-xl text-xs font-semibold inline-flex items-center gap-1.5 transition duration-300 group-hover:scale-105">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
+              <span class="leading-none">Copy</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Physical Gift Address -->
+    <div class="glass-card-white rounded-3xl p-6 border border-accent-gold/50 shadow-lg text-left mt-6">
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-10 h-10 rounded-full bg-accent-gold/20 text-accent-gold flex items-center justify-center flex-shrink-0">
+          <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+        </div>
+        <div>
+          <h4 class="font-serif font-bold text-sm text-primary">Kirim Kado Fisik</h4>
+          <p id="gift-recipient-info" class="text-xs text-text-muted"></p>
+        </div>
+      </div>
+
+      <p id="gift-address-text" class="text-xs text-text-main bg-bg-card p-3 rounded-xl border border-border-subtle leading-relaxed mb-4"></p>
+
+      <button id="btn-copy-address" class="btn-gold w-full py-2.5 rounded-xl text-xs font-semibold inline-flex items-center justify-center gap-2">
+        <svg class="w-4 h-4 text-accent-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
+        <span>Salin Alamat Pengiriman</span>
       </button>
     </div>
 
-    <!-- Toggleable Gift Container -->
-    <div id="amplop-content" class="max-w-2xl mx-auto hidden transition-all duration-500">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
-        
-        <!-- Bank Groom Card - Redesigned as realistic credit card -->
-        <div class="rounded-3xl border border-border-subtle shadow-2xl relative overflow-hidden aspect-[1.586/1] bg-white text-left group">
-          <!-- Background Gradient and Pattern (Mimicking the image) -->
-          <div class="absolute inset-0 bg-gradient-to-br from-white via-white to-neutral-200 opacity-90"></div>
-          <div class="absolute inset-0 opacity-[0.03] bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48ZyBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMwMDAiIGZpbGwtb3BhY2l0eT0iMSI+PHBhdGggZD0iTTAgMGg0MHY0MEgwVjB6bTIwIDIwaDIwdjIwSDIWMjB6TTAgMjBoMjB2MjBIMFYyMHoyMCAwaDIwdjIwSDIwVjB6Ii8+PC9nPjwvZz48L3N2Zz4=')] bg-repeat"></div>
-
-          <!-- Inner Content Container -->
-          <div class="relative z-10 p-6 flex flex-col h-full">
-            <!-- Top Row: Bank Logo -->
-            <div class="flex justify-end mb-1">
-              <!-- Replace this with an actual <img id="bank-groom-logo" src="bca-logo.png" /> in production -->
-              <span id="bank-groom-name" class="font-bold text-lg text-primary tracking-tight">BCA</span>
-            </div>
-
-            <!-- Middle Row: EMV Chip and Number -->
-            <div class="flex-grow flex flex-col justify-center">
-              <!-- Golden Chip Simulation -->
-              <div class="w-12 h-9 rounded-md bg-gradient-to-b from-yellow-300 to-yellow-500 border border-yellow-600/50 mb-4 p-1 flex flex-wrap gap-px">
-                <div class="w-2 h-2 bg-yellow-700/20 rounded-sm"></div>
-                <div class="w-2 h-2 bg-yellow-700/20 rounded-sm"></div>
-                <div class="w-2 h-2 bg-yellow-700/20 rounded-sm"></div>
-                <div class="w-2 h-2 bg-yellow-700/20 rounded-sm"></div>
-              </div>
-              
-              <!-- Account Number -->
-              <div id="bank-groom-acc" class="font-mono text-2xl font-medium text-neutral-800 tracking-wider">
-                <!-- Populated from config.js (e.g., 1234 5678) -->
-              </div>
-            </div>
-
-            <!-- Bottom Row: Card Holder Name and Floating Copy Button -->
-            <div class="flex justify-between items-end">
-              <p id="bank-groom-holder" class="text-sm text-neutral-600 uppercase tracking-wide font-medium">
-                <!-- Populated from config.js (e.g., HABIB) -->
-              </p>
-
-              <!-- Small Floating Copy Button (matching reference image) -->
-              <button id="btn-copy-groom-bank" class="bg-white hover:bg-neutral-50 shadow-md border border-neutral-200 text-neutral-800 px-3.5 py-2.5 rounded-xl text-xs font-semibold inline-flex items-center gap-1.5 transition duration-300 group-hover:scale-105">
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
-                <span class="leading-none">Copy</span>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Bank Bride Card - Redesigned as realistic credit card -->
-        <div class="rounded-3xl border border-border-subtle shadow-2xl relative overflow-hidden aspect-[1.586/1] bg-white text-left group">
-          <!-- Background Gradient and Pattern -->
-          <div class="absolute inset-0 bg-gradient-to-br from-white via-white to-neutral-200 opacity-90"></div>
-          <div class="absolute inset-0 opacity-[0.03] bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48ZyBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMwMDAiIGZpbGwtb3BhY2l0eT0iMSI+PHBhdGggZD0iTTAgMGg0MHY0MEgwVjB6bTIwIDIwaDIwdjIwSDIWMjB6TTAgMjBoMjB2MjBIMFYyMHoyMCAwaDIwdjIwSDIwVjB6Ii8+PC9nPjwvZz48L3N2Zz4=')] bg-repeat"></div>
-
-          <div class="relative z-10 p-6 flex flex-col h-full">
-            <div class="flex justify-end mb-1">
-              <span id="bank-bride-name" class="font-bold text-lg text-primary tracking-tight">MANDIRI</span>
-            </div>
-
-            <div class="flex-grow flex flex-col justify-center">
-              <div class="w-12 h-9 rounded-md bg-gradient-to-b from-yellow-300 to-yellow-500 border border-yellow-600/50 mb-4 p-1 flex flex-wrap gap-px">
-                <div class="w-2 h-2 bg-yellow-700/20 rounded-sm"></div>
-                <div class="w-2 h-2 bg-yellow-700/20 rounded-sm"></div>
-                <div class="w-2 h-2 bg-yellow-700/20 rounded-sm"></div>
-                <div class="w-2 h-2 bg-yellow-700/20 rounded-sm"></div>
-              </div>
-              
-              <div id="bank-bride-acc" class="font-mono text-2xl font-medium text-neutral-800 tracking-wider">
-                <!-- Populated from config.js -->
-              </div>
-            </div>
-
-            <div class="flex justify-between items-end">
-              <p id="bank-bride-holder" class="text-sm text-neutral-600 uppercase tracking-wide font-medium">
-                <!-- Populated from config.js -->
-              </p>
-
-              <button id="btn-copy-bride-bank" class="bg-white hover:bg-neutral-50 shadow-md border border-neutral-200 text-neutral-800 px-3.5 py-2.5 rounded-xl text-xs font-semibold inline-flex items-center gap-1.5 transition duration-300 group-hover:scale-105">
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
-                <span class="leading-none">Copy</span>
-              </button>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
- <!-- Physical Gift Address -->
-
-<div class="glass-card-white rounded-3xl p-6 border border-accent-gold/50 shadow-lg text-left mt-6">
-<div class="flex items-center gap-3 mb-3">
-<div class="w-10 h-10 rounded-full bg-accent-gold/20 text-accent-gold flex items-center justify-center flex-shrink-0">
-<svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
-
-</div>
-
-<div>
-
-<h4 class="font-serif font-bold text-sm text-primary">Kirim Kado Fisik</h4>
-
-<p id="gift-recipient-info" class="text-xs text-text-muted"></p>
-
-</div>
-
-</div>
-
-<p id="gift-address-text" class="text-xs text-text-main bg-bg-card p-3 rounded-xl border border-border-subtle leading-relaxed mb-4"></p>
-
-<button id="btn-copy-address" class="btn-gold w-full py-2.5 rounded-xl text-xs font-semibold inline-flex items-center justify-center gap-2">
-
-<svg class="w-4 h-4 text-accent-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
-
-<span>Salin Alamat Pengiriman</span>
-
-</button>
-
-</div>
+  </div>
+</section>
 
 
 </div> 

@@ -149,21 +149,21 @@ export const WEDDING_CONFIG = {
   // Digital Envelope & Gift
   gift: {
     bank: {
-      bankName: "BCA",
-      bankLogo: "BCA",
+      bankName: "MANDIRI",
+      bankLogo: "MANDIRI",
       accountNumber: "4561488414",
       accountHolder: "Edita Efendi"
     },
     bankBride: {
       bankName: "MANDIRI",
       bankLogo: "MANDIRI",
-      accountNumber: "1370020747719",
-      accountHolder: "Edita Efendi"
+      accountNumber: "1370020799678",
+      accountHolder: "TAMARA ANDILIANI"
     },
     physicalGift: {
-      recipient: "Edita Efendi",
+      recipient: "TAMARA ANDILIANI",
       phone: "081234567890",
-      address: "Sempu 0036/009, Pringombo Rongkop, Gunungkidul"
+      address: "Tenggang 004 No.014, Tengang, Kemedang, Tanjungsari, Gunungkidul"
     }
   },
 
