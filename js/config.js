@@ -162,7 +162,7 @@ export const WEDDING_CONFIG = {
     },
     physicalGift: {
       recipient: "TAMARA ANDILIANI",
-      phone: "081234567890",
+      phone: "-",
       address: "Tenggang 004 No.014, Tengang, Kemedang, Tanjungsari, Gunungkidul"
     }
   },
