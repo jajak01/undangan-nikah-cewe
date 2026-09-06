@@ -21,7 +21,8 @@ const SEED_WISHES = [
     status_kehadiran: "hadir",
     jumlah_pax: 2,
     ucapan: "Barakallahu lakuma wa baraka 'alaikuma wa jama'a bainakuma fii khoir. Selamat menempuh hidup baru. Semoga menjadi keluarga yang sakinah, mawaddah, warahmah.",
-    created_at: new Date(Date.now() - 3600000 * 24 * 2).toISOString()
+    created_at: new Date(Date.now() - 3600000 * 24 * 2).toISOString(),
+    updated_at: new Date(Date.now() - 3600000 * 24 * 2).toISOString()
   },
   {
     id: "seed-2",
@@ -29,7 +30,8 @@ const SEED_WISHES = [
     status_kehadiran: "hadir",
     jumlah_pax: 4,
     ucapan: "Selamat berbahagia! Semoga acaranya lancar sampai hari H, dan senantiasa diberkahi kebahagiaan serta rezeki yang melimpah. Aamiin ya Rabbal 'Alamin.",
-    created_at: new Date(Date.now() - 3600000 * 12).toISOString()
+    created_at: new Date(Date.now() - 3600000 * 12).toISOString(),
+    updated_at: new Date(Date.now() - 3600000 * 12).toISOString()
   },
   {
     id: "seed-3",
@@ -37,7 +39,8 @@ const SEED_WISHES = [
     status_kehadiran: "hadir",
     jumlah_pax: 1,
     ucapan: "Happy wedding! Akhirnya berlabuh ke pelaminan setelah perjalanan panjang. Semoga langgeng selalu sampai kakek nenek!",
-    created_at: new Date(Date.now() - 3600000 * 3).toISOString()
+    created_at: new Date(Date.now() - 3600000 * 3).toISOString(),
+    updated_at: new Date(Date.now() - 3600000 * 3).toISOString()
   }
 ];
 
@@ -118,7 +121,7 @@ class RSVPManager {
 
     try {
       const response = await fetch(
-        `${this.supabaseUrl()}/rest/v1/guests?select=id,slug,nama_tamu,status_kehadiran,jumlah_pax&slug=eq.${encodeURIComponent(this.slug)}&limit=1`,
+        `${this.supabaseUrl()}/rest/v1/guests?select=id,slug,nama_tamu,status_kehadiran,jumlah_pax,created_at,updated_at&slug=eq.${encodeURIComponent(this.slug)}&limit=1`,
         { headers: this.supabaseHeaders() }
       );
 
@@ -176,9 +179,9 @@ class RSVPManager {
   async loadWishes() {
     if (this.isSupabaseConfigured()) {
       try {
-        // Only fetch rows that actually contain a wish (ucapan IS NOT NULL).
+        // Fetch rows ordered by updated_at.desc so recent updates appear first
         const response = await fetch(
-          `${this.supabaseUrl()}/rest/v1/guests?select=id,nama_tamu,status_kehadiran,jumlah_pax,ucapan,created_at,updated_at&ucapan=not.is.null&order=created_at.desc`,
+          `${this.supabaseUrl()}/rest/v1/guests?select=id,nama_tamu,status_kehadiran,jumlah_pax,ucapan,created_at,updated_at&ucapan=not.is.null&order=updated_at.desc`,
           { headers: this.supabaseHeaders() }
         );
         if (response.ok) {
@@ -243,8 +246,7 @@ class RSVPManager {
       `;
     }
 
-    // Update the existing pre-registered row — never insert, never overwrite
-    // nama_tamu / no_whatsapp / jumlah_pax.
+    const nowIso = new Date().toISOString();
     const payload = {
       status_kehadiran: status,
       ucapan: ucapan
@@ -273,7 +275,7 @@ class RSVPManager {
           const row = (Array.isArray(updated) && updated[0]) || {
             ...this.currentGuest,
             ...payload,
-            created_at: this.currentGuest.created_at || new Date().toISOString()
+            updated_at: nowIso
           };
           this.upsertLocalWish(row);
           success = true;
@@ -286,7 +288,7 @@ class RSVPManager {
         this.upsertLocalWish({
           ...this.currentGuest,
           ...payload,
-          created_at: this.currentGuest.created_at || new Date().toISOString()
+          updated_at: nowIso
         });
         localStorage.setItem(this.storageKey, JSON.stringify(this.wishes));
         success = true;
@@ -296,7 +298,7 @@ class RSVPManager {
       this.upsertLocalWish({
         ...this.currentGuest,
         ...payload,
-        created_at: this.currentGuest.created_at || new Date().toISOString()
+        updated_at: nowIso
       });
       localStorage.setItem(this.storageKey, JSON.stringify(this.wishes));
       success = true;
@@ -327,6 +329,13 @@ class RSVPManager {
     } else {
       this.wishes.unshift(row);
     }
+
+    // Keep wishes array sorted by updated_at (newest first) locally
+    this.wishes.sort((a, b) => {
+      const timeA = new Date(a.updated_at || a.created_at || 0).getTime();
+      const timeB = new Date(b.updated_at || b.created_at || 0).getTime();
+      return timeB - timeA;
+    });
   }
 
   render() {
@@ -382,7 +391,8 @@ class RSVPManager {
       }
 
       const initial = (wish.nama_tamu || 'T').charAt(0).toUpperCase();
-      const timeStr = Utils.formatTimeAgo(wish.created_at || new Date());
+      // Use updated_at timestamp, fall back to created_at if undefined
+      const timeStr = Utils.formatTimeAgo(wish.updated_at || wish.created_at || new Date());
       const paxText = (wish.jumlah_pax && wish.jumlah_pax > 1 && isHadir) ? ` • ${wish.jumlah_pax} Orang` : '';
 
       return `
